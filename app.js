@@ -29,6 +29,7 @@ module.exports = app => {
     // 验证用户信息
     app.passport.verify(async (ctx, user) => {
 
+        //TODO: 是否登录成功的`开关变量`
         if (true) {
             return user;
         } else {
