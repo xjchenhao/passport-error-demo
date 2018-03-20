@@ -4,8 +4,6 @@ module.exports = app => {
     class sysController extends app.Controller {
 
         async userInfo (ctx) {
-            console.log(ctx.isAuthenticated());
-            console.log(ctx.session);
             if (!ctx.isAuthenticated()) {
                 ctx.body = {
                     code: "-1",

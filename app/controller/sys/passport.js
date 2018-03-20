@@ -14,10 +14,6 @@ module.exports = app => {
                 "msg": "登录成功",
                 "result": {}
             }
-            console.log(ctx.user);
-            console.log(ctx.session);
-            console.log(ctx.isAuthenticated());
-
         }
 
         async failure (ctx) {

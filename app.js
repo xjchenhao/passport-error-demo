@@ -22,21 +22,15 @@ module.exports = app => {
         if (!password) {
             return done(null, false, { message: '请输入密码' });
         }
-        done(null, user);
+
         app.passport.doVerify(req, user, done);
     }));
 
     // 验证用户信息
     app.passport.verify(async (ctx, user) => {
-        let list = await ctx.app.mysql.get('back').select('back_user', {
-            where: {
-                user_account: user.username,
-                user_password: crypto.createHash('md5').update(user.password).digest('hex'),
-            },
-        });
 
-        if (list.length) {
-            return 8887878;
+        if (true) {
+            return user;
         } else {
             return false;
         }
