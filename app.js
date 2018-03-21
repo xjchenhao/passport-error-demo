@@ -36,6 +36,12 @@ module.exports = app => {
             return false;
         }
     });
-    app.passport.serializeUser(async (ctx, user) => { });
-    app.passport.deserializeUser(async (ctx, user) => { });
+    app.passport.serializeUser(async (ctx, user) => {
+        console.log('serializeUser',user);
+        return user;
+    });
+    app.passport.deserializeUser(async (ctx, user) => {
+        console.log('deserializeUser',user);
+        return user;
+    });
 };

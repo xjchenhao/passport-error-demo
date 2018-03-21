@@ -4,11 +4,11 @@ module.exports = app => {
     class sysController extends app.Controller {
 
         async success (ctx) {
-            await ctx.login({
-                'username': 111
-            }, {
-                    session: true
-                })
+            // await ctx.login({
+            //     'username': 111
+            // }, {
+            //         session: true
+            //     })
             ctx.body = {
                 "code": "0",
                 "msg": "登录成功",
